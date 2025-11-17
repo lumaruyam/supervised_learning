@@ -3,8 +3,8 @@
 ## Project Information
 
 ### Contributors
-- **First Name Last Name**  
-- **First Name Last Name**
+- **Julia Randriatsimivony**  
+- **Luli Maruyama**
 
 ---
 
