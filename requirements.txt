@@ -4,3 +4,7 @@ numpy
 seaborn
 scikit-learn
 ipython
+mlflow
+scipy
+joblib
+pyyaml
