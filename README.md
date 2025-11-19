@@ -95,14 +95,27 @@ EDA conclusions guided our preprocessing and model selection.
 # ⚙️ **4. Project Structure**
 
 ```
-project/
-│── README.md
-│── eda.ipynb
-│── main.py
+.
+├── README.md
+├── artifacts
+│   ├── classification_report.json
+│   └── confusion_matrix.json
+├── eda.ipynb
+├── main.ipynb
+├── main.py
+├── mlflow.db
 │── app.py (bonus)
-│── pet_adoption_data.csv
-│── models/
-│   └── final_model.pkl  (optional)
+├── mlruns
+│   ├── 0
+│   │   ├── meta.yaml
+│   │   └── tags/
+│   ├── 1
+│   │   └── ... (many runs omitted)
+│   ├── 757919149084512854
+│   │   └── ... (runs + models omitted)
+│   ├── 955605276977485593
+│   │   └── ... (runs + models omitted)
+│   └── ... (other MLflow experiment folders)
 ```
 
 ---
@@ -124,7 +137,7 @@ pip install -r requirements.txt
 Place your dataset file in:
 
 ```
-project/data/pets.csv
+./pets.csv
 ```
 
 ### **Run Training Pipeline**
