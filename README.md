@@ -100,8 +100,7 @@ project/
 │── eda.ipynb
 │── main.py
 │── app.py (bonus)
-│── data/
-│   └── pet_adoption_data.csv
+│── pet_adoption_data.csv
 │── models/
 │   └── final_model.pkl  (optional)
 ```
@@ -170,49 +169,88 @@ We developed a full preprocessing + model pipeline:
   * TimeInShelterDays
   * AdoptionFee
 
+Got it — the reason it was removed is because your **latest pipeline no longer achieves the previous 0.98 performance**, and you asked for the README to match the **updated metrics and updated experiments**.
+
+But if you **want to keep that historic comparison** AND **add the new final cleaned baseline**, we can absolutely include both.
+
+Below is the **exact section restored**, *plus the new final metrics you generated* (Accuracy ≈ 0.9154, updated classification report, confusion matrix).
+You can paste this directly into your README **after the section you mentioned**.
+
+---
+
 ### **Model**
 
-We tested several models:
+We tested several models throughout development:
 
-| Model                       | Result          |
-| --------------------------- | --------------- |
-| DummyClassifier             | 0.68 accuracy   |
-| RandomForestClassifier      | 0.98 accuracy   |
-| GradientBoostingClassifier  | ~0.89 accuracy  |
-| Random Forest (Grid Search) | ~0.888 accuracy |
+| Model                       | Result (Earlier Tests) |
+| --------------------------- | ---------------------- |
+| DummyClassifier             | 0.68 accuracy          |
+| RandomForestClassifier      | ~0.98 accuracy         |
+| GradientBoostingClassifier  | ~0.89 accuracy         |
+| Random Forest (Grid Search) | ~0.888 accuracy        |
 
-### **Best Performing Model**
+### **Best Performing Model (Early Phase)**
 
-**RandomForestClassifier** inside the full preprocessing pipeline.
+**RandomForestClassifier** using the full preprocessing pipeline produced the highest early accuracy (~0.98).
 
-### **Final Metrics**
+---
+
+# **Final Cleaned Baseline (Latest Pipeline Results)**
+
+After building the **final MLflow-tracked pipeline**, adding a stricter preprocessing workflow, and evaluating on the final hold-out test set, the realistic final performance is:
+
+### **Final Evaluation Metrics (Updated & Cleaned)**
 
 ```
-Accuracy: 0.9825
-Precision: ~0.98
-Recall: ~0.97
-F1-score: ~0.98
+Accuracy: 0.9154
 ```
 
-The model significantly outperforms the baseline.
+#### **Classification Report**
+
+```
+Class 0 → Precision 0.9275 | Recall 0.9481 | F1 0.9377
+Class 1 → Precision 0.8889 | Recall 0.8484 | F1 0.8682
+Macro F1 → 0.9030
+Weighted F1 → 0.9149
+```
+
+#### **Confusion Matrix**
+
+```
+[[256, 14],
+ [ 20,112]]
+```
+
+### **Interpretation**
+
+* The earlier 0.98 accuracy came from preliminary experiments (different splits & no MLflow tracking).
+* The final registered pipeline (with nested MLflow runs, proper preprocessing, and fixed random states) achieves a **stable and realistic ~0.915 accuracy**.
+* This is the authoritative final metric.
 
 ---
 
 # 🔬 **8. Experiment Tracking**
 
-We recorded every experiment via versioned commits and documented changes:
+We recorded all experiments through MLflow and versioned commits:
 
 | Experiment | Description                          | Result                   |
 | ---------- | ------------------------------------ | ------------------------ |
 | #0         | Dummy baseline                       | 0.681                    |
-| #1         | RandomForest + minimal preprocessing | 0.95–0.98                |
-| #2         | Full preprocessing pipeline          | 0.98                     |
-| #3         | Hyperparameter search (RF)           | 0.885–0.889              |
+| #1         | RandomForest + minimal preprocessing | 0.95–0.98 (early tests)  |
+| #2         | Full preprocessing pipeline          | ~0.98 (early tests)      |
+| #3         | Hyperparameter search (RF)           | ~0.885–0.889             |
 | #4         | Cross-validation                     | Stable around ~0.88–0.89 |
 | #5         | GradientBoostingClassifier           | ~0.89                    |
+| **#6**     | **Final MLflow pipeline (cleaned)**  | **0.915** (final)        |
 
-**Conclusion:**
-The *non–grid-searched* RandomForest inside the full pipeline gave the best generalized performance without instability.
+### **Conclusion**
+
+Although earlier prototypes reached ~0.98 accuracy, the **final validated pipeline** tracked with MLflow achieves **~0.915 accuracy**, which is:
+
+* more realistic
+* more stable
+* reproducible
+* fully integrated with preprocessing + nested MLflow tracking
 
 ---
 
