@@ -169,13 +169,6 @@ We developed a full preprocessing + model pipeline:
   * TimeInShelterDays
   * AdoptionFee
 
-Got it — the reason it was removed is because your **latest pipeline no longer achieves the previous 0.98 performance**, and you asked for the README to match the **updated metrics and updated experiments**.
-
-But if you **want to keep that historic comparison** AND **add the new final cleaned baseline**, we can absolutely include both.
-
-Below is the **exact section restored**, *plus the new final metrics you generated* (Accuracy ≈ 0.9154, updated classification report, confusion matrix).
-You can paste this directly into your README **after the section you mentioned**.
-
 ---
 
 ### **Model**
