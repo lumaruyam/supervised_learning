@@ -13,7 +13,9 @@
 
 ## **Context**
 
-Animal shelters often operate under severe resource constraints—limited staff, limited budget, and overcrowded facilities. Some animals are adopted quickly, while others stay in the shelter for weeks or months. Long stays increase operational costs and negatively impact animal well-being (stress, illness risk, behavioral deterioration).
+Animal shelters often operate under severe resource constraints: limited staff, limited budget, and overcrowded facilities. Some animals are adopted quickly, while others stay in the shelter for weeks or months. Long stays increase operational costs and negatively impact animal well-being (stress, illness risk, behavioral deterioration).
+
+---
 
 ## **Business Problem**
 
@@ -24,6 +26,8 @@ Shelters need a way to identify early which animals are less likely to be adopte
 * Prioritizing foster placements
 * Adjusting placement strategies before long shelter stays occur
 
+---
+
 ## **Stakeholders**
 
 * Shelter directors & operational managers
@@ -31,10 +35,14 @@ Shelters need a way to identify early which animals are less likely to be adopte
 * Adoption coordinators
 * Volunteers & foster networks
 
+---
+
 ## **Goal**
 
 Build a Machine Learning model that predicts the likelihood that an animal will be adopted, based on characteristics such as breed, age, health condition, size, and time in shelter.
 This prediction helps shelters prioritize care and resources toward pets at high risk of prolonged stays.
+
+---
 
 ## **Constraints**
 
@@ -49,6 +57,8 @@ This prediction helps shelters prioritize care and resources toward pets at high
 The dataset represents pets from a real-world adoption environment (non-synthetic), containing **2,007 rows** and **12 columns**.
 
 Data Source: Kaggle (https://www.kaggle.com/datasets/rabieelkharoua/predict-pet-adoption-status-dataset)
+
+---
 
 ### **Features**
 
@@ -72,7 +82,6 @@ Data Source: Kaggle (https://www.kaggle.com/datasets/rabieelkharoua/predict-pet-
 | Target Column            | Description                            |
 | ------------------------ | -------------------------------------- |
 | AdoptionLikelihood (0/1) | 1 = likely to be adopted, 0 = unlikely |
-
 
 ---
 
@@ -248,6 +257,8 @@ We recorded all experiments through MLflow and versioned commits:
 | #4         | Cross-validation                     | Stable around ~0.88–0.89 |
 | #5         | GradientBoostingClassifier           | ~0.89                    |
 | **#6**     | **Final MLflow pipeline (cleaned)**  | **0.915** (final)        |
+
+---
 
 ### **Conclusion**
 
