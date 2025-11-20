@@ -154,6 +154,26 @@ This will:
 * Train the model
 * Output metrics
 
+### Run the MLflow Experiment
+
+The MLflow pipeline for the Pet Adoption dataset is fully set up. To rerun the experiment:
+
+```bash
+python3 main.py
+````
+
+> `main.py` contains the full MLflow workflow: baseline model, preprocessing pipeline, final RandomForest model, and hyperparameter search. All metrics, models, and artifacts (classification report, confusion matrix) are automatically logged to the `mlflow.db` SQLite tracking database.
+
+To view MLflow results:
+
+```bash
+mlflow ui
+```
+
+* Open [http://localhost:5000](http://localhost:5000) in a browser to explore all runs, metrics, parameters, and logged models.
+
+```
+
 ---
 
 # 🏗️ **6. Baseline Model**
