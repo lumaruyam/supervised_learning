@@ -87,17 +87,19 @@ Data Source: Kaggle (https://www.kaggle.com/datasets/rabieelkharoua/predict-pet-
 
 # 🔍 **3. Exploratory Data Analysis (EDA)**
 
-The notebook `eda.ipynb` includes:
+The notebook: `eda.ipynb`
 
-* Distribution of target classes
-* Missing values and dtype analysis
-* Histograms for numeric features
-* Value counts for categorical features
-* Correlation heatmaps
-* Feature–target relationships (e.g., age vs adoption likelihood)
-* Categorical patterns (e.g., breed adoption trends)
+**Key Observations:**
+- **Pet Type & Breed:** Dogs and Labradors are most likely adopted; rabbits and parakeets are less likely.
+- **Age:** Younger pets (<55 months) are adopted more; older pets (>130 months) rarely adopted.
+- **Size:** Medium pets are favored; small and large pets less so.
+- **Color & Weight:** Minimal effect overall, though some colors are preferred within pet types.
+- **Vaccination:** Vaccinated pets have >3× higher adoption likelihood.
+- **Previous Owner & Shelter Time:** Little impact on adoption.
+- **Adoption Fee:** Moderate fees increase adoption; very high fees reduce it.
 
-EDA conclusions guided our preprocessing and model selection.
+**Summary:**  
+Younger, medium-sized, vaccinated dogs—especially Labradors—have the highest adoption likelihood, while older, small/large, unvaccinated pets, and rabbits need special attention. This analysis informs shelters on prioritizing care, marketing, and adoption strategies.
 
 ---
 
