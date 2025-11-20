@@ -108,14 +108,15 @@ Younger, medium-sized, vaccinated dogs—especially Labradors—have the highest
 ```
 .
 ├── README.md
+├── data
+│ └── pet_adoption_data.csv # Dataset file
 ├── artifacts
-│   ├── classification_report.json
-│   └── confusion_matrix.json
-├── eda.ipynb
-├── main.ipynb
-├── main.py
-├── mlflow.db
-├── pet_adoption_data.csv
+│ ├── classification_report.json
+│ └── confusion_matrix.json
+├── eda.ipynb # Exploratory Data Analysis notebook
+├── main.ipynb # Jupyter notebook for experimentation
+├── main.py # Main script for MLflow experiments
+├── mlflow.db # SQLite database for MLflow tracking
 ├── .gitignore
 ```
 
@@ -138,7 +139,7 @@ pip install -r requirements.txt
 Place your dataset file in:
 
 ```
-./your_data.csv
+./data/pet_adoption_data.csv
 ```
 
 ### **Run Training Pipeline**
