@@ -116,7 +116,6 @@ Younger, medium-sized, vaccinated dogs—especially Labradors—have the highest
 ├── eda.ipynb # Exploratory Data Analysis notebook
 ├── main.ipynb # Jupyter notebook for experimentation
 ├── main.py # Main script for MLflow experiments
-├── mlflow.db # SQLite database for MLflow tracking
 ├── .gitignore
 ```
 
