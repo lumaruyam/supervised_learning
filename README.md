@@ -113,18 +113,6 @@ EDA conclusions guided our preprocessing and model selection.
 ├── main.ipynb
 ├── main.py
 ├── mlflow.db
-│── app.py (bonus)
-├── mlruns
-│   ├── 0
-│   │   ├── meta.yaml
-│   │   └── tags/
-│   ├── 1
-│   │   └── ... (many runs omitted)
-│   ├── 757919149084512854
-│   │   └── ... (runs + models omitted)
-│   ├── 955605276977485593
-│   │   └── ... (runs + models omitted)
-│   └── ... (other MLflow experiment folders)
 ```
 
 ---
@@ -271,49 +259,7 @@ Although earlier prototypes reached ~0.98 accuracy, the **final validated pipeli
 
 ---
 
-# 🚀 **9. (Bonus) HTTP API – `app.py`**
-
-Included optional FastAPI server:
-
-### Usage
-
-```bash
-uvicorn app:app --reload
-```
-
-### Endpoint
-
-**POST /predict**
-
-Example input:
-
-```json
-{
-  "PetType": "Dog",
-  "Breed": "Labrador",
-  "AgeMonths": 12,
-  "Color": "Black",
-  "Size": "Large",
-  "WeightKg": 25,
-  "Vaccinated": true,
-  "HealthCondition": "Healthy",
-  "TimeInShelterDays": 14,
-  "AdoptionFee": 120,
-  "PreviousOwner": false
-}
-```
-
-Output:
-
-```json
-{
-  "adoption_likelihood": 1
-}
-```
-
----
-
-# 📈 **10. Conclusion**
+# 📈 **9. Conclusion**
 
 Our machine learning pipeline successfully predicts adoption likelihood with **very high accuracy**, enabling shelters to:
 
