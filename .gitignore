@@ -2,3 +2,5 @@
 profile.html
 mlruns/
 mlflow.db
+.DS_Store
+project.ipynb
