@@ -26,7 +26,7 @@ mlflow.set_tracking_uri("sqlite:///mlflow.db")
 # Load Data
 # -------------------------------------------------------
 
-df = pd.read_csv("pet_adoption_data.csv")
+df = pd.read_csv("./data/pet_adoption_data.csv")
 
 # -------------------------------------------------------
 # Build Preprocessing Transformer
