@@ -167,7 +167,7 @@ python3 main.py
 To view MLflow results:
 
 ```bash
-mlflow ui
+mlflow ui --backend-store-uri sqlite:///mlflow.db
 ```
 
 * Open [http://localhost:5000](http://localhost:5000) in a browser to explore all runs, metrics, parameters, and logged models.
