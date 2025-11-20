@@ -79,9 +79,9 @@ Data Source: Kaggle (https://www.kaggle.com/datasets/rabieelkharoua/predict-pet-
 
 ### **Target**
 
-| Target Column            | Description                            |
-| ------------------------ | -------------------------------------- |
-| AdoptionLikelihood (0/1) | 1 = likely to be adopted, 0 = unlikely |
+| Target Column            | Type        | Description                            |
+| ------------------------ | ----------- | -------------------------------------- |
+| AdoptionLikelihood       | Binary (0/1)| 1 = likely to be adopted, 0 = unlikely|
 
 ---
 
