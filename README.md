@@ -113,6 +113,8 @@ EDA conclusions guided our preprocessing and model selection.
 ├── main.ipynb
 ├── main.py
 ├── mlflow.db
+├── pet_adoption_data.csv
+├── .gitignore
 ```
 
 ---
@@ -134,13 +136,13 @@ pip install -r requirements.txt
 Place your dataset file in:
 
 ```
-./pets.csv
+./your_data.csv
 ```
 
 ### **Run Training Pipeline**
 
 ```bash
-python main.py
+python3 main.py
 ```
 
 This will:
