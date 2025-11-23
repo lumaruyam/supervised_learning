@@ -113,6 +113,7 @@ Younger, medium-sized, vaccinated dogs—especially Labradors—have the highest
 ├── artifacts
 │ ├── classification_report.json
 │ └── confusion_matrix.json
+├── app.py # Script for Streamlit (bonus)
 ├── eda.ipynb # Exploratory Data Analysis notebook
 ├── main.ipynb # Jupyter notebook for experimentation
 ├── main.py # Main script for MLflow experiments
@@ -292,3 +293,91 @@ Our machine learning pipeline successfully predicts adoption likelihood with **v
 * Enhance animal welfare
 
 This project demonstrates the business value of data-driven decision making in the animal welfare sector.
+
+---
+
+Below is the **bonus section** you can append to the README.
+It explains **what `app.py` does**, **why it satisfies the bonus requirement**, and **how to run it**.
+
+You can insert it **after Section 5 or at the end** — wherever you prefer.
+I’ll format it in the same style as the existing README.
+
+---
+
+# 🌐 **10. Bonus: HTTP API + Interactive Web App (`app.py`)**
+
+We created an additional script: `app.py`, which exposes a fully interactive HTTP-based user interface for making predictions with the trained model.
+
+This application is built with Streamlit, which automatically launches a local web server and provides a browser-based interface. Through this UI, users can input pet characteristics and instantly receive:
+
+* A prediction: Likely to be adopted / Unlikely to be adopted
+* The model’s confidence score
+* Personalized recommendations for improving adoption chances
+* A full explanation of each feature
+
+The app internally loads the dataset, rebuilds the preprocessing pipeline, and trains the **same RandomForest model** used in the main MLflow pipeline—ensuring full consistency with the documented workflow.
+
+---
+
+## 🚀 **How to Run the Web App**
+
+Make sure your environment is set up and dependencies are installed:
+
+```bash
+pip install -r requirements.txt
+```
+
+### **Start the API/Web App**
+
+From the project root directory:
+
+```bash
+streamlit run app.py
+```
+
+This will:
+
+* Start a local HTTP server (default: `http://localhost:8501`)
+* Open an interactive browser interface
+* Load the dataset from `./data/pet_adoption_data.csv`
+* Train the model and allow live predictions
+
+If the dataset is missing, the app will alert you directly in the UI.
+
+---
+
+## 🧩 **What the App Provides**
+
+### 🔹 **Interactive Feature Inputs**
+
+Users can adjust:
+
+* Pet type, breed, color
+* Age, weight, size
+* Vaccination status
+* Health condition
+* Time spent in the shelter
+* Adoption fee
+* Previous ownership
+
+### 🔹 **Model Prediction**
+
+The app returns:
+
+* **Predicted adoption likelihood**
+* **Confidence score** from the model
+* Visual indicators (success/error banners)
+
+### 🔹 **Actionable, Personalized Recommendations**
+
+If the pet is predicted to have **low adoption likelihood**, the app generates:
+
+* Marketing suggestions
+* Behavioral or medical interventions
+* Adoption fee adjustments
+* Breed-specific messaging
+* Social media content ideas
+
+These recommendations are dynamically generated based on the pet's attributes.
+
+
