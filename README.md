@@ -221,7 +221,7 @@ We tested several models throughout development:
 
 ---
 
-# **Final Cleaned Baseline (Latest Pipeline Results)**
+## **Final Cleaned Baseline (Latest Pipeline Results)**
 
 After building the **final MLflow-tracked pipeline**, adding a stricter preprocessing workflow, and evaluating on the final hold-out test set, the realistic final performance is:
 
