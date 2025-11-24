@@ -296,14 +296,6 @@ This project demonstrates the business value of data-driven decision making in t
 
 ---
 
-Below is the **bonus section** you can append to the README.
-It explains **what `app.py` does**, **why it satisfies the bonus requirement**, and **how to run it**.
-
-You can insert it **after Section 5 or at the end** — wherever you prefer.
-I’ll format it in the same style as the existing README.
-
----
-
 # 🌐 **10. Bonus: HTTP API + Interactive Web App (`app.py`)**
 
 We created an additional script: `app.py`, which exposes a fully interactive HTTP-based user interface for making predictions with the trained model.
