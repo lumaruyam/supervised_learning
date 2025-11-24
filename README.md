@@ -307,8 +307,6 @@ This application is built with Streamlit, which automatically launches a local w
 * Personalized recommendations for improving adoption chances
 * A full explanation of each feature
 
-The app internally loads the dataset, rebuilds the preprocessing pipeline, and trains the **same RandomForest model** used in the main MLflow pipeline—ensuring full consistency with the documented workflow.
-
 ---
 
 ## 🚀 **How to Run the Web App**
@@ -333,7 +331,7 @@ This will:
 * Open an interactive browser interface
 * Load the dataset from `./data/pet_adoption_data.csv`
 * Train the model and allow live predictions
-* 
+
 ---
 
 ## 🧩 **What the App Provides**
