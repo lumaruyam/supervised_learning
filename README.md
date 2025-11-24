@@ -360,7 +360,7 @@ The app returns:
 * **Confidence score** from the model
 * Visual indicators (success/error banners)
 
-### 🔹 **Actionable, Personalized Recommendations**
+### 🔹 **Personalized Recommendations**
 
 If the pet is predicted to have **low adoption likelihood**, the app generates:
 
