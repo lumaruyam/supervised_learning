@@ -333,9 +333,7 @@ This will:
 * Open an interactive browser interface
 * Load the dataset from `./data/pet_adoption_data.csv`
 * Train the model and allow live predictions
-
-If the dataset is missing, the app will alert you directly in the UI.
-
+* 
 ---
 
 ## 🧩 **What the App Provides**
@@ -369,7 +367,5 @@ If the pet is predicted to have **low adoption likelihood**, the app generates:
 * Adoption fee adjustments
 * Breed-specific messaging
 * Social media content ideas
-
-These recommendations are dynamically generated based on the pet's attributes.
 
 
